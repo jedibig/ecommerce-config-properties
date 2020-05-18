@@ -1,1 +1,16 @@
-
+spring.datasource.url=jdbc:oracle:thin:@trainingdb.czhvnr09unyz.us-east-1.rds.amazonaws.com:1521:ORCL
+spring.datasource.username=admin
+spring.datasource.password=password
+spring.datasource.driver-class-name=oracle.jdbc.driver.OracleDriver
+spring.flyway.locations=classpath:db/migration
+spring.flyway.placeholder-prefix=${
+spring.flyway.placeholder-replacement=true
+spring.flyway.placeholder-suffix=}
+spring.flyway.placeholders.schema_name=test
+spring.jpa.show-sql=true
+server.port=${portNum:8136}
+eureka.client.serviceUrl.defaultZone=http://${eurekahost:3.87.29.41}:8761/eureka
+eureka.client.register-with-eureka=true
+eureka.client.fetch-registry=true
+management.endpoints.web.exposure.include=*
+management.endpoints.web.exposure.base-path=/user-management
